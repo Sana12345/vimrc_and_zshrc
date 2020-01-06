@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/mwaterbolk/.oh-my-zsh"
+export ZSH=".oh-my-zsh"
 
 export LC_ALL=en_US.UTF-8
 
@@ -12,7 +12,7 @@ export LC_ALL=en_US.UTF-8
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-
+HISTSIZE=HISTFILESIZE
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -106,6 +106,7 @@ if which pyenv-virtualenv-init > /dev/null; \
 then eval "$(pyenv virtualenv-init -)"; fi
 
 
+alias ls='ls -hN --color=auto --group-directories-first'
 
 alias gitlog='git log --all --oneline --graph'
 
@@ -127,3 +128,16 @@ d='dirs -v | head -10'
 7='cd -7'
 8='cd -8'
 9='cd -9'
+
+alias open='gnome-open'
+alias down='cd ~/Downloads'
+alias own='cd ~/ownCloud/'
+alias mkdir='mkdir -pv'
+alias ccat='highlight --out-format=ansi'
+alias ethspeed='speedometer -r enp0s25'
+alias wifispeed='speedometer -r wlp3s0'
+
+
+pyhelp() {python3.7 -c "help('$1')" ;}
+
+alias calc='bc -l'
