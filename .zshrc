@@ -36,7 +36,7 @@ HISTSIZE=HISTFILESIZE
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -112,11 +112,11 @@ alias gitlog='git log --all --oneline --graph'
 
 function chpwd() {
     emulate -L zsh
-    ls 
+    ls
 }
 
 
-alias ctags="`brew --prefix`/bin/ctags"
+#alias ctags="`brew --prefix`/bin/ctags"
 
 d='dirs -v | head -10'
 1='cd -'
@@ -136,8 +136,7 @@ alias mkdir='mkdir -pv'
 alias ccat='highlight --out-format=ansi'
 alias ethspeed='speedometer -r enp0s25'
 alias wifispeed='speedometer -r wlp3s0'
-
-
-pyhelp() {python3.7 -c "help('$1')" ;}
-
 alias calc='bc -l'
+alias lsd='ls -d */'
+alias mv='mv -v'
+
